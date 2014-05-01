@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative '../lib/bencher/runner'
+
+path = ARGV.first || 'benchmarks'
+benchmarks_path = File.join(Dir.pwd, path)
+exit ::Bencher::Runner.run(benchmarks_path)
